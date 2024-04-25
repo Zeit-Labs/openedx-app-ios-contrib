@@ -1,4 +1,10 @@
-import os, localizable
+import os
+import localizable
+
+"""
+Translations are pulled from https://github.com/openedx/openedx-translations to the I18N directory.
+This script splits the translations from the I18N directory to all modules in the repository.
+"""
 
 
 def separate_translation_to_modules(modules_dir, lang_dir):
