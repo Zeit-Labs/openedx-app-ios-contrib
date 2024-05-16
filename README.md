@@ -28,7 +28,7 @@ To get the latest translations for all languages use the following command:
 	make pull_translations
 ```
 - Run [`atlas pull`](https://github.com/openedx/openedx-atlas) to download the latest translations file from the [openedx/openedx-translations](https://github.com/openedx/openedx-translations) repository which contains the latest translations for all languages.
-- The translations will be pulled into a single file `I18N/uk.lproj/Localization.strings` ([example](https://github.com/openedx/openedx-translations/blob/2737aac533c4e6a621fcf6b9c003ac47ec3bcfcb/translations/openedx-app-ios/I18N/en.lproj/Localizable.strings#L1-L14)).
+- The translations will be pulled into a single file `I18N/uk.lproj/Localization.strings` ([example](https://github.com/openedx/openedx-translations/blob/2737aac533c4e6a621fcf6b9c003ac47ec3bcfcb/translations/openedx-app-ios/I18N/uk.lproj/Localizable.strings)).
 - The translation file is split into each module e.g. `Discovery/Discovery/uk.lproj/Localization.strings`.
 - The `I18N/uk.lproj/Localization.strings` is removed.
    
@@ -48,7 +48,7 @@ Arguments can be passed via the `ATLAS_OPTIONS` environment variable as shown be
 ``` bash
 make ATLAS_OPTIONS='--repository=<your-github-org>/<repository-name> --revision=<branch-name>' pull_translations
 ```
-There are additional arguments can be passed to `atlas pull`. Refer to the [atlas documentations ](https://github.com/openedx/openedx-atlas) for more information.
+Additional arguments can be passed to `atlas pull`. Refer to the [atlas documentations ](https://github.com/openedx/openedx-atlas) for more information.
 
 #### Testing translations
 Until the [pull request #422](https://github.com/openedx/openedx-app-ios/pull/422) is merged, translations needs to be pulled from the testing branch `Zeit-Labs/openedx-translations` repo under `fc_55_sample` branch with the following options:
@@ -64,6 +64,8 @@ To translate the app join Transifex and add your translations `openedx-app-ios` 
  - https://app.transifex.com/open-edx/openedx-translations/openedx-app-ios/ (the link will start working after the [pull request #442](https://github.com/openedx/openedx-app-ios/pull/422) is merged)
 
 Once the resource is both 100% translated and reviewed Transifex will push it to the [openedx-translations](https://github.com/openedx/openedx-translations) repository and developers can use the translations in their app.
+
+By default, all translations are disregarded in this repository except for the English translation.
 
 
 ## API

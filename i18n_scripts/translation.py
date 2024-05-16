@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 This script contains the necessary methods to accomplish two functions:
  1- Combine the English translations from all modules in the repository to the I18N directory. After the English
