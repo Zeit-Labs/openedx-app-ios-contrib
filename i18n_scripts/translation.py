@@ -28,18 +28,23 @@ def parse_arguments():
     return parser.parse_args()
 
 
-def get_translation_file_path(modules_dir, module):
+def get_translation_file_path(modules_dir, module_name, lang_dir, create_dirs=False):
     """
     Retrieves the path of the translation file from the module name
 
     Parameters:
         modules_dir (str): The path to the directory containing all the modules.
-        module (str): The module's name that we want its translation.
+        module_name (str): The module's name that we want.
+        lang_dir (str): The language directory's name that we want.
+        create_dirs (bool): If True it will create the parent directories when they do not exist, default to False.
 
     Returns:
         file_path (str): The module's translation path.
     """
-    translation_file = os.path.join(modules_dir, module, module, 'en.lproj', 'Localizable.strings')
+    lang_dir_path = os.path.join(modules_dir, module_name, module_name, lang_dir)
+    if create_dirs:
+        os.makedirs(lang_dir_path, exist_ok=True)
+    translation_file = os.path.join(lang_dir_path, 'Localizable.strings')
     return translation_file
 
 
@@ -53,16 +58,14 @@ def get_modules_to_translate(modules_dir):
     Returns:
         list of str: A list of module names that have translation files for the specified language.
     """
-    dirs = [
+    modules_list = [
         directory for directory in os.listdir(modules_dir)
-        if os.path.isdir(os.path.join(modules_dir, directory))
+        if (
+            os.path.isdir(os.path.join(modules_dir, directory))
+            and os.path.isfile(get_translation_file_path(modules_dir, directory, 'en.lproj'))
+            and directory != 'I18N'
+        )
     ]
-
-    modules_list = []
-    for module in dirs:
-        translation_file = get_translation_file_path(modules_dir, module)
-        if os.path.isfile(translation_file):
-            modules_list.append(module)
     return modules_list
 
 
@@ -81,12 +84,14 @@ def get_translations(modules_dir):
     ordered_dict_of_translations = OrderedDict()
     modules = get_modules_to_translate(modules_dir)
     for module in modules:
-        translation_file = get_translation_file_path(modules_dir, module)
+        translation_file = get_translation_file_path(modules_dir, module, lang_dir='en.lproj')
         module_translations = localizable.parse_strings(filename=translation_file)
 
-        for entry in module_translations:
-            key_with_module = f"{module}.{entry['key']}"
-            ordered_dict_of_translations[key_with_module] = entry
+        ordered_dict_of_translations.update(
+            [
+                (f"{module}.{entry['key']}", entry) for entry in module_translations
+            ]
+        )
 
     return ordered_dict_of_translations
 
@@ -106,9 +111,8 @@ def write_combined_translation_file(modules_dir, content_ordered_dict):
        are the translation keys, and the values are dictionaries with 'value' and 'comment' keys representing the
        translation value and optional comments, respectively.
     """
-    combined_translation_dir = os.path.join(modules_dir, 'I18N', 'en.lproj')
-    os.makedirs(combined_translation_dir, exist_ok=True)
-    with open(os.path.join(combined_translation_dir, 'Localizable.strings'), 'w') as f:
+    translation_file_path = get_translation_file_path(modules_dir, 'I18N', 'en.lproj', create_dirs=True)
+    with open(translation_file_path, 'w') as f:
         for key, value in content_ordered_dict.items():
             write_line_and_comment(f, value, key=key)
 
@@ -140,7 +144,7 @@ def get_languages_dirs(modules_dir):
         Output:
             ['ar.lproj', 'uk.lproj', ...]
     """
-    lang_parent_dir = os.path.join(modules_dir, 'I18N')
+    lang_parent_dir = os.path.join(modules_dir, 'I18N', 'I18N')
     languages_dirs = [
         directory for directory in os.listdir(lang_parent_dir)
         if directory.endswith('.lproj') and directory != "en.lproj"
@@ -177,8 +181,8 @@ def extract_translations_from_file(modules_dir, lang_dir):
             }
     """
     translations = defaultdict(list)
-    file_path = os.path.join(modules_dir, 'I18N', lang_dir, 'Localizable.strings')
-    lang_list = localizable.parse_strings(filename=file_path)
+    translations_file_path = get_translation_file_path(modules_dir, 'I18N', lang_dir)
+    lang_list = localizable.parse_strings(filename=translations_file_path)
     for translation_entry in lang_list:
         module_name, key_remainder = translation_entry['key'].split('.', maxsplit=1)
         split_entry = {
@@ -203,9 +207,8 @@ def write_translations_to_modules(modules_dir, lang_dir, modules_translations):
         None
     """
     for module, translation_list in modules_translations.items():
-        combined_translation_dir = os.path.join(modules_dir, module, module, lang_dir)
-        os.makedirs(combined_translation_dir, exist_ok=True)
-        with open(os.path.join(combined_translation_dir, 'Localizable.strings'), 'w') as f:
+        translation_file_path = get_translation_file_path(modules_dir, module, lang_dir, create_dirs=True)
+        with open(translation_file_path, 'w') as f:
             for translation_entry in translation_list:
                 write_line_and_comment(f, translation_entry)
 
