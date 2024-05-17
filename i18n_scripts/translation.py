@@ -148,7 +148,7 @@ def get_languages_dirs(modules_dir):
     return languages_dirs
 
 
-def separate_translation_to_modules(modules_dir, lang_dir):
+def extract_translations_from_file(modules_dir, lang_dir):
     """
     Separate translations from a translation file into modules.
 
@@ -255,7 +255,7 @@ def split_translation_files(modules_dir=None):
         modules_dir = os.path.dirname(os.path.dirname(__file__))
     languages_dirs = get_languages_dirs(modules_dir)
     for lang_dir in languages_dirs:
-        translations = separate_translation_to_modules(modules_dir, lang_dir)
+        translations = extract_translations_from_file(modules_dir, lang_dir)
         write_translations_to_modules(modules_dir, lang_dir, translations)
 
 
