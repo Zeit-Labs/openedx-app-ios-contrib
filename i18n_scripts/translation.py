@@ -20,10 +20,11 @@ def parse_arguments():
     The script takes only one of the two arguments --split or --combine as indicated below.
     """
     parser = argparse.ArgumentParser(description='Split or combine translations.')
-    parser.add_argument('--split', action='store_true',
-                        help='Split translations into separate files for each module and language.')
-    parser.add_argument('--combine', action='store_true',
-                        help='Combine the English translations from all modules into a single file.')
+    group = parser.add_mutually_exclusive_group(required=True)
+    group.add_argument('--split', action='store_true',
+                       help='Split translations into separate files for each module and language.')
+    group.add_argument('--combine', action='store_true',
+                       help='Combine the English translations from all modules into a single file.')
     return parser.parse_args()
 
 
@@ -260,19 +261,13 @@ def split_translation_files(modules_dir=None):
 
 def main():
     args = parse_arguments()
-    if args.split and args.combine:
-        # Call the function to split translations
-        print("You can specify either --split or --combine.")
-    elif args.split:
+    if args.split:
         # Call the function to split translations
         split_translation_files()
     elif args.combine:
         # Call the function to combine translations
         combine_translation_files()
-    else:
-        print("Please specify either --split or --combine.")
 
 
 if __name__ == "__main__":
     main()
-
