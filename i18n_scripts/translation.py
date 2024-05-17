@@ -8,10 +8,10 @@ This script contains the necessary methods to accomplish two functions:
     language file in the I18N directory and split it into the modules.
 """
 
-import os
-import localizable
-from collections import OrderedDict
 import argparse
+import os
+from collections import OrderedDict, defaultdict
+import localizable
 
 
 def parse_arguments():
@@ -176,7 +176,7 @@ def separate_translation_to_modules(modules_dir, lang_dir):
                 ...
             }
     """
-    translations = {}
+    translations = defaultdict(list)
     file_path = os.path.join(modules_dir, 'I18N', lang_dir, 'Localizable.strings')
     lang_list = localizable.parse_strings(filename=file_path)
     for translation_entry in lang_list:
@@ -186,7 +186,7 @@ def separate_translation_to_modules(modules_dir, lang_dir):
             'value': translation_entry['value'],
             'comment': translation_entry['comment']
         }
-        translations.setdefault(module_name, []).append(split_entry)
+        translations[module_name].append(split_entry)
     return translations
 
 
