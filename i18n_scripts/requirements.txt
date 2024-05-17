@@ -1,0 +1,4 @@
+# Package dependencies
+openedx-atlas==0.6.0
+# TODO: Publish new version on pypi as `python3-localizable`
+git+https://github.com/Amr-Nash/python-localizable.git@15d3bf2466d0de1a826d3f0ff1f365b0c1910f56
