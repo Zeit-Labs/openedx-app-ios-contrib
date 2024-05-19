@@ -97,27 +97,6 @@ def get_translations(modules_dir):
 
     return {'I18N': translations}
 
-#
-# def write_combined_translation_file(modules_dir, content_ordered_dict):
-#     """
-#     Write the contents of an ordered dictionary to a Localizable.strings file.
-#
-#     This function takes an ordered dictionary containing translation data and writes it to a Localizable.strings
-#     file located in the 'I18N/en.lproj' directory within the specified modules directory. It creates the directory
-#     if it doesn't exist.
-#
-#     Parameters:
-#        modules_dir (str): The path to the modules directory
-#        where the I18N directory will be written.
-#        content_ordered_dict (OrderedDict): An ordered dictionary containing translation data. The keys
-#        are the translation keys, and the values are dictionaries with 'value' and 'comment' keys representing the
-#        translation value and optional comments, respectively.
-#     """
-#     translation_file_path = get_translation_file_path(modules_dir, 'I18N', 'en.lproj', create_dirs=True)
-#     with open(translation_file_path, 'w') as f:
-#         for key, value in content_ordered_dict.items():
-#             write_line_and_comment(f, value, key=key)
-
 
 def combine_translation_files(modules_dir=None):
     """
@@ -125,10 +104,8 @@ def combine_translation_files(modules_dir=None):
     """
     if not modules_dir:
         modules_dir = os.path.dirname(os.path.dirname(__file__))
-    combined_translation_dict = get_translations(modules_dir)
-    write_translations_to_modules(modules_dir, 'en.lproj', combined_translation_dict)
-
-    # write_combined_translation_file(modules_dir, combined_translation_dict)
+    translation = get_translations(modules_dir)
+    write_translations_to_modules(modules_dir, 'en.lproj', translation)
 
 
 def get_languages_dirs(modules_dir):
@@ -225,7 +202,7 @@ def _escape(s):
     return s
 
 
-def write_line_and_comment(file, entry, key=None):
+def write_line_and_comment(file, entry):
     """
     Write a translation line with an optional comment to a file.
 
@@ -238,10 +215,9 @@ def write_line_and_comment(file, entry, key=None):
         None
     """
     comment = entry.get('comment')  # Retrieve the comment, if present
-    key = key if key else entry['key']
     if comment:
         file.write(f"/* {comment} */\n")
-    file.write(f'"{key}" = "{_escape(entry["value"])}";\n')
+    file.write(f'"{entry["key"]}" = "{_escape(entry["value"])}";\n')
 
 
 def split_translation_files(modules_dir=None):
