@@ -81,40 +81,42 @@ def get_translations(modules_dir):
         translation line. The key of the outer OrderedDict consists of the value of the translation key combined with
         the name of the module containing the translation.
     """
-    ordered_dict_of_translations = OrderedDict()
+    translations = []
     modules = get_modules_to_translate(modules_dir)
     for module in modules:
         translation_file = get_translation_file_path(modules_dir, module, lang_dir='en.lproj')
-        module_translations = localizable.parse_strings(filename=translation_file)
+        module_translation = localizable.parse_strings(filename=translation_file)
 
-        ordered_dict_of_translations.update(
-            [
-                (f"{module}.{entry['key']}", entry) for entry in module_translations
-            ]
-        )
+        translations += [
+            {
+                'key': f"{module}.{translation_entry['key']}",
+                'value': translation_entry['value'],
+                'comment': translation_entry['comment']
+            } for translation_entry in module_translation
+        ]
 
-    return ordered_dict_of_translations
+    return {'I18N': translations}
 
-
-def write_combined_translation_file(modules_dir, content_ordered_dict):
-    """
-    Write the contents of an ordered dictionary to a Localizable.strings file.
-
-    This function takes an ordered dictionary containing translation data and writes it to a Localizable.strings
-    file located in the 'I18N/en.lproj' directory within the specified modules directory. It creates the directory
-    if it doesn't exist.
-
-    Parameters:
-       modules_dir (str): The path to the modules directory
-       where the I18N directory will be written.
-       content_ordered_dict (OrderedDict): An ordered dictionary containing translation data. The keys
-       are the translation keys, and the values are dictionaries with 'value' and 'comment' keys representing the
-       translation value and optional comments, respectively.
-    """
-    translation_file_path = get_translation_file_path(modules_dir, 'I18N', 'en.lproj', create_dirs=True)
-    with open(translation_file_path, 'w') as f:
-        for key, value in content_ordered_dict.items():
-            write_line_and_comment(f, value, key=key)
+#
+# def write_combined_translation_file(modules_dir, content_ordered_dict):
+#     """
+#     Write the contents of an ordered dictionary to a Localizable.strings file.
+#
+#     This function takes an ordered dictionary containing translation data and writes it to a Localizable.strings
+#     file located in the 'I18N/en.lproj' directory within the specified modules directory. It creates the directory
+#     if it doesn't exist.
+#
+#     Parameters:
+#        modules_dir (str): The path to the modules directory
+#        where the I18N directory will be written.
+#        content_ordered_dict (OrderedDict): An ordered dictionary containing translation data. The keys
+#        are the translation keys, and the values are dictionaries with 'value' and 'comment' keys representing the
+#        translation value and optional comments, respectively.
+#     """
+#     translation_file_path = get_translation_file_path(modules_dir, 'I18N', 'en.lproj', create_dirs=True)
+#     with open(translation_file_path, 'w') as f:
+#         for key, value in content_ordered_dict.items():
+#             write_line_and_comment(f, value, key=key)
 
 
 def combine_translation_files(modules_dir=None):
@@ -124,7 +126,9 @@ def combine_translation_files(modules_dir=None):
     if not modules_dir:
         modules_dir = os.path.dirname(os.path.dirname(__file__))
     combined_translation_dict = get_translations(modules_dir)
-    write_combined_translation_file(modules_dir, combined_translation_dict)
+    write_translations_to_modules(modules_dir, 'en.lproj', combined_translation_dict)
+
+    # write_combined_translation_file(modules_dir, combined_translation_dict)
 
 
 def get_languages_dirs(modules_dir):
