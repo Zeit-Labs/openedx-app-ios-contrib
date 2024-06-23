@@ -274,7 +274,6 @@
 		02E224DA2BB76B3E00EF1ADB /* DynamicOffsetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicOffsetView.swift; sourceTree = "<group>"; };
 		02E225AF291D29EB0067769A /* UrlExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlExtension.swift; sourceTree = "<group>"; };
 		02E93F842AEBAEBC006C4750 /* AppReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReviewViewModel.swift; sourceTree = "<group>"; };
-		02ED50CB29A64B84008341CD /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		02F164362902A9EB0090DDEF /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		02F6EF3A28D9B8EC00835477 /* CourseCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCellView.swift; sourceTree = "<group>"; };
 		02F6EF4928D9F0A700835477 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
@@ -888,16 +887,6 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		0770DE0328D07831006D8A5D /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
 		07169468296D996800E3DED6 /* CoreTests */ = {
 			isa = PBXNativeTarget;
@@ -905,7 +894,6 @@
 			buildPhases = (
 				07169465296D996800E3DED6 /* Sources */,
 				07169466296D996800E3DED6 /* Frameworks */,
-				07169467296D996800E3DED6 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -923,7 +911,6 @@
 			buildPhases = (
 				ED83AD5255805030E042D62A /* [CP] Check Pods Manifest.lock */,
 				0770DE5A28D0B1E5006D8A5D /* SwiftGen */,
-				0770DE0328D07831006D8A5D /* Headers */,
 				0770DE0428D07831006D8A5D /* Sources */,
 				0770DE0528D07831006D8A5D /* Frameworks */,
 				0770DE0628D07831006D8A5D /* Resources */,
@@ -990,13 +977,6 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		07169467296D996800E3DED6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		0770DE0628D07831006D8A5D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1211,7 +1191,7 @@
 				02F164372902A9EB0090DDEF /* StringExtension.swift in Sources */,
 				0231CDBE2922422D00032416 /* CSSInjector.swift in Sources */,
 				064987982B4D69FF0071642A /* CSSInjectionProtocol.swift in Sources */,
-				BAAD62C62AFCF00B000E6103 /* CustomDisclosureGroup.swift in Sources */,
+				BAAD62C62AFCF00B000E6103,
 				029EE3ED2BF6650500F64F33 /* Bundle.swift in Sources */,
 				BADB3F5B2AD6EC56004D5CFA /* ResultExtension.swift in Sources */,
 				0236961928F9A26900EEF206 /* AuthRepository.swift in Sources */,
@@ -1250,7 +1230,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				0770DE5C28D0B209006D8A5D /* en */,
-				02ED50CB29A64B84008341CD /* uk */,
+				02ED50CB29A64B84008341CD,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

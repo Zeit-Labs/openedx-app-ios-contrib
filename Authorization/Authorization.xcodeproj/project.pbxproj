@@ -53,7 +53,6 @@
 		025F40E129D360E20064C183 /* ResetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewModel.swift; sourceTree = "<group>"; };
 		02A2ACDA2A4B016100FBBBBB /* AuthorizationAnalytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationAnalytics.swift; sourceTree = "<group>"; };
 		02E0618329DC2373006E9024 /* ResetPasswordViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewModelTests.swift; sourceTree = "<group>"; };
-		02ED50CC29A64B90008341CD /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		02F3BFE4292533720051930C /* AuthorizationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationRouter.swift; sourceTree = "<group>"; };
 		071009C628D1DA4F00344290 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		07169454296D913300E3DED6 /* AuthorizationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AuthorizationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -288,16 +287,6 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		0770DE3628D0A319006D8A5D /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
 		07169453296D913300E3DED6 /* AuthorizationTests */ = {
 			isa = PBXNativeTarget;
@@ -306,7 +295,6 @@
 				737436DC910C5A48E4C01AC7 /* [CP] Check Pods Manifest.lock */,
 				07169450296D913300E3DED6 /* Sources */,
 				07169451296D913300E3DED6 /* Frameworks */,
-				07169452296D913300E3DED6 /* Resources */,
 				95C8CAF0620ABBBAD7ED66D6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -325,7 +313,6 @@
 			buildPhases = (
 				FAD36FCACFE4B45E3668B2AA /* [CP] Check Pods Manifest.lock */,
 				0770DE6E28D0C03E006D8A5D /* SwiftGen */,
-				0770DE3628D0A319006D8A5D /* Headers */,
 				0770DE3728D0A319006D8A5D /* Sources */,
 				0770DE3828D0A319006D8A5D /* Frameworks */,
 				0770DE3928D0A319006D8A5D /* Resources */,
@@ -379,13 +366,6 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		07169452296D913300E3DED6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		0770DE3928D0A319006D8A5D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -528,7 +508,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				0770DE6C28D0C035006D8A5D /* en */,
-				02ED50CC29A64B90008341CD /* uk */,
+				02ED50CC29A64B90008341CD,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
