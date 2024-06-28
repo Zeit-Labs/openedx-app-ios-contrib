@@ -322,7 +322,7 @@ def add_translation_files_to_xcode(modules_dir: Path = None):
             for localizable_abs_path in list_translation_files(module_path):
                 localizable_relative_path = localizable_abs_path.relative_to(module_path / module_name)
                 print('  - Adding', localizable_relative_path)
-                xcode_project.add_file(localizable_relative_path, tree=LOCALIZABLE_FILES_TREE)
+                # xcode_project.add_file(localizable_relative_path, tree=LOCALIZABLE_FILES_TREE)
 
             xcode_project.save()
 
