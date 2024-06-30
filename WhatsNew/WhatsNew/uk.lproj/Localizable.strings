@@ -1,11 +1,3 @@
-/* 
-  Localizable.strings
-  WhatsNew
-
-  Created by  Stepanok Ivan on 18.10.2023.
-  
-*/
-
 "TITLE" = "Що нового";
 "BUTTON_PREVIOUS" = "Назад";
 "BUTTON_NEXT" = "Далі";

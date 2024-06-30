@@ -155,7 +155,6 @@
 		02C3553A2C08DCE000501342 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = uk; path = uk.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		02D4FC2D2BBD7C9C00C47748 /* MessageSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSectionView.swift; sourceTree = "<group>"; };
 		02E3803D2BFF9F0A00815AFA /* CourseProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseProgressView.swift; sourceTree = "<group>"; };
-		02ED50CF29A64BB6008341CD /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		02F0144E28F46474002E513D /* CourseContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseContainerView.swift; sourceTree = "<group>"; };
 		02F0145628F4A2FF002E513D /* CourseContainerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseContainerViewModel.swift; sourceTree = "<group>"; };
 		02F3BFDC29252E900051930C /* CourseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseRouter.swift; sourceTree = "<group>"; };
@@ -213,6 +212,7 @@
 		BAC0E0DD2B32F0F3006B68A9 /* DownloadsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsViewModel.swift; sourceTree = "<group>"; };
 		BAD9CA2C2B2736BB00DE790A /* LessonLineProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonLineProgressView.swift; sourceTree = "<group>"; };
 		BAD9CA492B2C88E000DE790A /* CourseVideoDownloadBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseVideoDownloadBarView.swift; sourceTree = "<group>"; };
+		C25946D5B31ECAB9AB5D61B5 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DB205BFA2AE81B1200136EC2 /* CourseDateViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDateViewModelTests.swift; sourceTree = "<group>"; };
 		DB7D6EAB2ADFCAC40036BB13 /* CourseDatesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseDatesView.swift; sourceTree = "<group>"; };
 		DB7D6EAD2ADFCB4A0036BB13 /* CourseDatesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDatesViewModel.swift; sourceTree = "<group>"; };
@@ -943,7 +943,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				02B6B3B328E1C49400232911 /* en */,
-				02ED50CF29A64BB6008341CD /* uk */,
+				C25946D5B31ECAB9AB5D61B5 /* uk */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

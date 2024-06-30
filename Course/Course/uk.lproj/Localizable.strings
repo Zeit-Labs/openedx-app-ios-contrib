@@ -1,16 +1,8 @@
-/* 
-  Localizable.strings
-  Course
-
-  Created by  Stepanok Ivan on 26.09.2022.
-  
-*/
-
-"OUTLINE.PASSED_THE_COURSE" = "Вітаємо, ви отримали сертифікат курсу “%@\.“";
+"OUTLINE.PASSED_THE_COURSE" = "Ви пройшли курс";
 "OUTLINE.VIEW_CERTIFICATE" = "Переглянути сертифікат";
 "OUTLINE.CERTIFICATE" = "Сертифікат";
 "OUTLINE.COURSE_VIDEOS" = "Відео з курсу";
-
+"OUTLINE.COURSE_HASNT_STARTED" = "Цей курс ще не почався.";
 "COURSEWARE.COURSE_CONTENT" = "Зміст курсу";
 "COURSEWARE.COURSE_UNITS" = "Модулі";
 "COURSEWARE.NEXT" = "Далі";
@@ -22,41 +14,33 @@
 "COURSEWARE.IS_FINISHED" = "“ завершена.";
 "COURSEWARE.CONTINUE" = "Продовжити";
 "COURSEWARE.RESUME_WITH" = "Продовжити далі:";
-
 "ERROR.NO_INTERNET" = "Ви не підключені до Інтернету. Перевірте підключення до Інтернету і спробуйте ще.";
 "ERROR.RELOAD" = "Перезавантажити";
 "ERROR.COMPONENT_NOT_FOUNT" = "Course component not found, please reload";
-"ERROR.NO_HANDOUTS" = "There are currently no handouts for this course";
-
+"ERROR.NO_HANDOUTS" = "Наразі для цього курсу немає роздаткових матеріалів";
 "ALERT.ROTATE_DEVICE" = "Поверніть пристрій, щоб переглянути це відео на весь екран.";
 "ALERT.ACCEPT" = "Accept";
 "ALERT.DELETE_ALL_VIDEOS" = "Are you sure you want to delete all video(s) for";
 "ALERT.DELETE_VIDEOS" = "Are you sure you want to delete video(s) for";
 "ALERT.STOP_DOWNLOADING" = "Turning off the switch will stop downloading and delete all downloaded videos for";
-"ALERT.WARNING" = "Warning";
-
-"COURSE_CONTAINER.COURSE" =  "Курс";
-"COURSE_CONTAINER.VIDEOS" =  "Всі відео";
-"COURSE_CONTAINER.DATES" =  "Dates";
-"COURSE_CONTAINER.DISCUSSIONS" =  "Дискусії";
-"COURSE_CONTAINER.HANDOUTS" =  "Матеріали";
-"COURSE_CONTAINER.HANDOUTS_IN_DEVELOPING" =  "Матеріали в процесі розробки";
-
+"ALERT.WARNING" = "УВАГА";
+"COURSE_CONTAINER.HOME" = "додому";
+"COURSE_CONTAINER.VIDEOS" = "Всі відео";
+"COURSE_CONTAINER.DATES" = "Dates";
+"COURSE_CONTAINER.DISCUSSIONS" = "Дискусії";
+"COURSE_CONTAINER.HANDOUTS" = "Матеріали";
+"COURSE_CONTAINER.HANDOUTS_IN_DEVELOPING" = "Матеріали в процесі розробки";
 "HANDOUTS_CELL_HANDOUTS.TITLE" = "Нотатки";
 "HANDOUTS_CELL_ANNOUNCEMENTS.TITLE" = "Оголошення";
 "HANDOUTS_CELL_HANDOUTS.DESCRIPTION" = "Знайдіть важливу інформацію про курс";
 "HANDOUTS_CELL_ANNOUNCEMENTS.DESCRIPTION" = "Будьте в курсі останніх новин";
-
 "NOT_AVALIABLE.TITLE" = "Цей інтерактивний компонент не доступний";
 "NOT_AVALIABLE.DESCRIPTION" = "Досліджуйте інші частини цього курсу або перегляньте цю в Браузері.";
 "NOT_AVALIABLE.BUTTON" = "Відкрити в браузері";
-
 "SUBTITLES.TITLE" = "Субтитри";
-
 "ACCESSIBILITY.DOWNLOAD" = "Скачати";
 "ACCESSIBILITY.CANCEL_DOWNLOAD" = "Скасувати завантаження";
 "ACCESSIBILITY.DELETE_DOWNLOAD" = "Видалити файл";
-
 "DOWNLOAD.DOWNLOADS" = "Downloads";
 "DOWNLOAD.DOWNLOAD" = "Download";
 "DOWNLOAD.ALL_VIDEOS_DOWNLOADED" = "All videos downloaded";
@@ -64,64 +48,55 @@
 "DOWNLOAD.DOWNLOAD_TO_DEVICE" = "Download to device";
 "DOWNLOAD.VIDEOS" = "Videos";
 "DOWNLOAD.REMAINING" = "Remaining";
-"DOWNLOAD.UNTITLED"= "Untitled";
-"DOWNLOAD.TOTAL"= "Total";
-
+"DOWNLOAD.UNTITLED" = "Untitled";
+"DOWNLOAD.TOTAL" = "Total";
 "DOWNLOAD.CHANGE_QUALITY_ALERT" = "You cannot change the download video quality when all videos are downloading";
 "DOWNLOAD.DOWNLOAD_LARGE_FILE_MESSAGE" = "The videos you've selected are larger than 1 GB. Do you want to download these videos?";
 "DOWNLOAD.NO_WIFI_MESSAGE" = "Your current download settings only allow downloads over Wi-Fi.\nPlease connect to a Wi-Fi network or change your download settings.";
-
-"COURSE_DATES.TODAY" = "Today";
-"COURSE_DATES.COMPLETED" = "Completed";
-"COURSE_DATES.PAST_DUE" = "Past due";
-"COURSE_DATES.DUE_NEXT" = "Due next";
-"COURSE_DATES.UNRELEASED" = "Unreleased";
-"COURSE_DATES.VERIFIED_ONLY" = "Verified Only";
-"COURSE_DATES.ITEMS_HIDDEN" = "Items Hidden";
-"COURSE_DATES.ITEM_HIDDEN" = "Item Hidden";
-"COURSE_DATES.TOAST_SUCCESS_TITLE" = "Due dates shifted";
-"COURSE_DATES.TOAST_SUCCESS_MESSAGE" = "Your due dates have been successfully shifted to help you stay on track.";
-"COURSE_DATES.VIEW_ALL_DATES" = "View all dates";
-"COURSE_DATES.SYNC_TO_CALENDAR" = "Sync to calendar";
-"COURSE_DATES.SYNC_TO_CALENDAR_MESSAGE" = "Automatically sync all deadlines and due dates for this course to your calendar.";
-"COURSE_DATES.ADD_CALENDAR_TITLE"="Add calendar";
-"COURSE_DATES.REMOVE_CALENDAR_TITLE"="Remove calendar";
-"COURSE_DATES.ADD_CALENDAR_PROMPT"="Would you like to add the %@ calendar \"%@\" ? \n You can edit or remove the course calendar any time in Calendar or Settings";
-"COURSE_DATES.REMOVE_CALENDAR_PROMPT"="Would you like to remove the %@ calendar \"%@\" ?";
-"COURSE_DATES.DATES_ADDED_ALERT_MESSAGE" = "\"%@\" has been added to your calendar.";
-"COURSE_DATES.CALENDAR_SYNC_MESSAGE"="Syncing calendar...";
-"COURSE_DATES.CALENDAR_VIEW_EVENTS"="View Events";
-"COURSE_DATES.CALENDAR_EVENTS_ADDED"="Your course calendar has been added.";
-"COURSE_DATES.CALENDAR_EVENTS_REMOVED"="Your course calendar has been removed.";
-"COURSE_DATES.CALENDAR_EVENTS"="Calendar events";
-"COURSE_DATES.CALENDAR_OUT_OF_DATE"="Your course calendar is out of date";
-"COURSE_DATES.CALENDAR_SHIFT_MESSAGE"="Your course dates have been shifted and your course calendar is no longer up to date with your new schedule.";
-"COURSE_DATES.CALENDAR_SHIFT_PROMPT_UPDATE_NOW"="Update now";
-"COURSE_DATES.CALENDAR_EVENTS_UPDATED"="Your course calendar has been updated.";
-"COURSE_DATES.CALENDAR_PERMISSION_NOT_DETERMINED"="%@ does not have calendar permission. Please go to settings and give calender permission.";
-"COURSE_DATES.OPEN_SETTINGS"="Open Settings";
-"COURSE_DATES.SETTINGS" = "Settings";
-
-"COURSE_DATES.RESET_DATE.RESET_DATE_BANNER.BODY" = "Don't worry - shift our suggested schedule to complete past due assignments without losing any progress.";
-"COURSE_DATES.RESET_DATE.RESET_DATE_BANNER.BUTTON" = "Shift due dates";
-"COURSE_DATES.RESET_DATE.RESET_DATE_BANNER.HEADER" = "Missed some deadlines?";
-
-"COURSE_DATES.RESET_DATE.TAB_INFO_BANNER.BODY" = "We built a suggested schedule to help you stay on track. But don’t worry – it’s flexible so you can learn at your own pace. If you happen to fall behind, you’ll be able to adjust the dates to keep yourself on track.";
+"COURSE_DATES.TODAY" = "Сьогодні";
+"COURSE_DATES.COMPLETED" = "Завершено";
+"COURSE_DATES.PAST_DUE" = "Прострочено";
+"COURSE_DATES.DUE_NEXT" = "Наступний термін";
+"COURSE_DATES.UNRELEASED" = "Невиданий";
+"COURSE_DATES.VERIFIED_ONLY" = "Лише перевірені";
+"COURSE_DATES.ITEMS_HIDDEN" = "Предмети приховано";
+"COURSE_DATES.ITEM_HIDDEN" = "Елемент приховано";
+"COURSE_DATES.TOAST_SUCCESS_TITLE" = "Терміни зміщено";
+"COURSE_DATES.TOAST_SUCCESS_MESSAGE" = "Ваші дати пологів успішно перенесено, щоб допомогти вам залишатися на шляху.";
+"COURSE_DATES.VIEW_ALL_DATES" = "Переглянути всі дати";
+"COURSE_DATES.SYNC_TO_CALENDAR" = "Синхронізувати з календарем";
+"COURSE_DATES.SYNC_TO_CALENDAR_MESSAGE" = "Автоматично синхронізуйте всі кінцеві терміни та терміни для цього курсу з вашим календарем.";
+"COURSE_DATES.ADD_CALENDAR_TITLE" = "Додати календар";
+"COURSE_DATES.REMOVE_CALENDAR_TITLE" = "Видалити календар";
+"COURSE_DATES.ADD_CALENDAR_PROMPT" = "Бажаєте додати календар %@ &quot; %@ &quot;?\n Ви можете будь-коли змінити або видалити календар курсу в Календарі або Налаштуваннях";
+"COURSE_DATES.REMOVE_CALENDAR_PROMPT" = "Чи бажаєте ви видалити календар %@ &quot; %@ &quot;?";
+"COURSE_DATES.DATES_ADDED_ALERT_MESSAGE" = "&quot; %@ &quot; додано до вашого календаря.";
+"COURSE_DATES.CALENDAR_SYNC_MESSAGE" = "Синхронізація календаря...";
+"COURSE_DATES.CALENDAR_VIEW_EVENTS" = "Переглянути події";
+"COURSE_DATES.CALENDAR_EVENTS_ADDED" = "Ваш календар курсу додано.";
+"COURSE_DATES.CALENDAR_EVENTS_REMOVED" = "Ваш календар курсу видалено.";
+"COURSE_DATES.CALENDAR_EVENTS" = "Календар подій";
+"COURSE_DATES.CALENDAR_OUT_OF_DATE" = "Ваш календар курсу застарів";
+"COURSE_DATES.CALENDAR_SHIFT_MESSAGE" = "Дати ваших курсів перенесено, і ваш календар курсів більше не відповідає новому розкладу.";
+"COURSE_DATES.CALENDAR_SHIFT_PROMPT_UPDATE_NOW" = "Оновити зараз";
+"COURSE_DATES.CALENDAR_EVENTS_UPDATED" = "Ваш календар курсу оновлено.";
+"COURSE_DATES.CALENDAR_PERMISSION_NOT_DETERMINED" = "%@ не має дозволу на календар. Перейдіть до налаштувань і надайте дозвіл календарю.";
+"COURSE_DATES.OPEN_SETTINGS" = "Відкрийте налаштування";
+"COURSE_DATES.SETTINGS" = "Налаштування";
+"COURSE_DATES.RESET_DATE.RESET_DATE_BANNER.BODY" = "Не хвилюйтеся – перенесіть наш запропонований розклад, щоб виконати прострочені завдання, не втрачаючи прогресу.";
+"COURSE_DATES.RESET_DATE.RESET_DATE_BANNER.BUTTON" = "Зсув термінів виконання";
+"COURSE_DATES.RESET_DATE.RESET_DATE_BANNER.HEADER" = "Пропустив деякі терміни?";
+"COURSE_DATES.RESET_DATE.TAB_INFO_BANNER.BODY" = "Ми склали запропонований розклад, щоб допомогти вам залишатися на шляху. Але не хвилюйтеся – він гнучкий, тому ви можете навчатися у своєму власному темпі. Якщо ви відстаєте, ви зможете скоригувати дати, щоб не відставати.";
 "COURSE_DATES.RESET_DATE.TAB_INFO_BANNER.HEADER" = "";
-
-"COURSE_DATES.RESET_DATE.UPGRADE_TO_COMPLETE_GRADED_BANNER.BODY" = "To complete graded assignments as part of this course, you can upgrade today.";
+"COURSE_DATES.RESET_DATE.UPGRADE_TO_COMPLETE_GRADED_BANNER.BODY" = "Щоб виконати оцінені завдання в рамках цього курсу, ви можете оновити сьогодні.";
 "COURSE_DATES.RESET_DATE.UPGRADE_TO_COMPLETE_GRADED_BANNER.BUTTON" = "";
 "COURSE_DATES.RESET_DATE.UPGRADE_TO_COMPLETE_GRADED_BANNER.HEADER" = "";
-
-"COURSE_DATES.RESET_DATE.UPGRADE_TO_RESET_BANNER.BODY" = "You are auditing this course, which means that you are unable to participate in graded assignments. It looks like you missed some important deadlines based on our suggested schedule. To complete graded assignments as part of this course and shift the past due assignments into the future, you can upgrade today.";
+"COURSE_DATES.RESET_DATE.UPGRADE_TO_RESET_BANNER.BODY" = "Ви перевіряєте цей курс, що означає, що ви не можете брати участь у оцінюваних завданнях. Схоже, ви пропустили деякі важливі терміни згідно з нашим запропонованим графіком. Щоб виконати оцінені завдання в рамках цього курсу та перенести прострочені завдання в майбутнє, ви можете оновити сьогодні.";
 "COURSE_DATES.RESET_DATE.UPGRADE_TO_RESET_BANNER.BUTTON" = "";
 "COURSE_DATES.RESET_DATE.UPGRADE_TO_RESET_BANNER.HEADER" = "";
-
-"COURSE_DATES.RESET_DATE.ERROR_MESSAGE" = "Your dates could not be shifted. Please try again.";
-"COURSE_DATES.RESET_DATE.SUCCESS_MESSAGE" = "Your dates have been successfully shifted.";
-"COURSE_DATES.RESET_DATE.TITLE" = "Course Dates";
-
-"COURSE.DUE_TODAY" = "Закінчується сьогодні";
-"COURSE.DUE_TOMORROW" = "Закінчується завтра";
-
+"COURSE_DATES.RESET_DATE.ERROR_MESSAGE" = "Ваші дати не можна перенести. Будь ласка спробуйте ще раз.";
+"COURSE_DATES.RESET_DATE.SUCCESS_MESSAGE" = "Ваші дати успішно перенесено.";
+"COURSE_DATES.RESET_DATE.TITLE" = "Дати курсу";
+"COURSE.DUE_TODAY" = "Термін виконання сьогодні";
+"COURSE.DUE_TOMORROW" = "Завтра";
 "COURSE.PROGRESS_COMPLETED" = "%@ з %@ завдань виконано";

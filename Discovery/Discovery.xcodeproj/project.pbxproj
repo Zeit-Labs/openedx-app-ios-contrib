@@ -67,7 +67,6 @@
 		029242EA2AE6AB7B00A940EC /* UpdateNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateNotificationView.swift; sourceTree = "<group>"; };
 		0297373F2949FB070051696B /* DiscoveryCoreModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DiscoveryCoreModel.xcdatamodel; sourceTree = "<group>"; };
 		029737412949FB3B0051696B /* DiscoveryPersistenceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryPersistenceProtocol.swift; sourceTree = "<group>"; };
-		02ED50C729A649C9008341CD /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		02ED50C829A649C9008341CD /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = uk; path = uk.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		02EF39D028D867690058F6BD /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		02EF39D828D86A380058F6BD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -93,6 +92,7 @@
 		919E55130969D91EF03C4C0B /* Pods_App_Discovery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App_Discovery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F968F74AD7F4B5F6E5A6084 /* Pods-App-Discovery-DiscoveryUnitTests.debugdev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Discovery-DiscoveryUnitTests.debugdev.xcconfig"; path = "Target Support Files/Pods-App-Discovery-DiscoveryUnitTests/Pods-App-Discovery-DiscoveryUnitTests.debugdev.xcconfig"; sourceTree = "<group>"; };
 		AAC0D83F5D34491E9FABCABC /* Pods-App-Discovery-DiscoveryUnitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Discovery-DiscoveryUnitTests.debug.xcconfig"; path = "Target Support Files/Pods-App-Discovery-DiscoveryUnitTests/Pods-App-Discovery-DiscoveryUnitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B74C4C53977D530B062A31C6 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CFC8494D299A66080055E497 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		CFC8494F299BE52C0055E497 /* SearchViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelTests.swift; sourceTree = "<group>"; };
 		E08D12E22B482D720096311A /* Course.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Course.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -591,7 +591,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				02EF39D828D86A380058F6BD /* en */,
-				02ED50C729A649C9008341CD /* uk */,
+				B74C4C53977D530B062A31C6 /* uk */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

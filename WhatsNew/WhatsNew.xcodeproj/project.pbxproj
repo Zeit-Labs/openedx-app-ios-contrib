@@ -52,7 +52,6 @@
 		02B54E102AE061C100C56962 /* WhatsNewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsNewRouter.swift; sourceTree = "<group>"; };
 		02E640782ADFF5920079AEDA /* WhatsNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsNewView.swift; sourceTree = "<group>"; };
 		02E6407D2ADFF6250079AEDA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		02E6407F2ADFF6270079AEDA /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		02E640802ADFFE440079AEDA /* WhatsNewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsNewViewModel.swift; sourceTree = "<group>"; };
 		02E640852ADFFF380079AEDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02E640892AE004300079AEDA /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
@@ -67,6 +66,7 @@
 		34C1F2BEAF7F0DCB8E630F33 /* Pods-App-WhatsNew.releasestage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-WhatsNew.releasestage.xcconfig"; path = "Target Support Files/Pods-App-WhatsNew/Pods-App-WhatsNew.releasestage.xcconfig"; sourceTree = "<group>"; };
 		365FD817D70DFBCBDE2EAE5F /* Pods-App-WhatsNew-WhatsNewTests.releaseprod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-WhatsNew-WhatsNewTests.releaseprod.xcconfig"; path = "Target Support Files/Pods-App-WhatsNew-WhatsNewTests/Pods-App-WhatsNew-WhatsNewTests.releaseprod.xcconfig"; sourceTree = "<group>"; };
 		4CB92C9DBA730A1B06B076BA /* Pods-App-WhatsNew.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-WhatsNew.release.xcconfig"; path = "Target Support Files/Pods-App-WhatsNew/Pods-App-WhatsNew.release.xcconfig"; sourceTree = "<group>"; };
+		52B547A7ACB08CE58BAC4596 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		58DF8140E3B3436F58C4C8B9 /* Pods-App-WhatsNew-WhatsNewTests.releasedev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-WhatsNew-WhatsNewTests.releasedev.xcconfig"; path = "Target Support Files/Pods-App-WhatsNew-WhatsNewTests/Pods-App-WhatsNew-WhatsNewTests.releasedev.xcconfig"; sourceTree = "<group>"; };
 		6F50A409FBCCC7C08712A25E /* Pods-App-WhatsNew.debugdev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-WhatsNew.debugdev.xcconfig"; path = "Target Support Files/Pods-App-WhatsNew/Pods-App-WhatsNew.debugdev.xcconfig"; sourceTree = "<group>"; };
 		9176CDC000731B73D2F10372 /* Pods-App-WhatsNew.debugstage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-WhatsNew.debugstage.xcconfig"; path = "Target Support Files/Pods-App-WhatsNew/Pods-App-WhatsNew.debugstage.xcconfig"; sourceTree = "<group>"; };
@@ -473,7 +473,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				02E6407D2ADFF6250079AEDA /* en */,
-				02E6407F2ADFF6270079AEDA /* uk */,
+				52B547A7ACB08CE58BAC4596 /* uk */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
