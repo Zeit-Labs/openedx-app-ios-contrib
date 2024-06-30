@@ -18,6 +18,7 @@ from pathlib import Path
 
 import localizable
 from pbxproj import XcodeProject
+from pbxproj.pbxextensions import FileOptions
 
 LOCALIZABLE_FILES_TREE = '<group>'
 
@@ -341,14 +342,31 @@ def add_translation_files_to_xcode(modules_dir: Path = None):
         for module_name, xcode_project in get_xcode_projects(modules_dir):
             module_path = modules_dir / module_name
             project_files_path = module_path / module_name  # e.g. openedx-app-ios/Authorization/Authorization
+
             with change_directory(project_files_path):
-
                 for localizable_abs_path in list_translation_files(module_path):
-                    language, _rest = str(localizable_relative_path).split('.lproj')  # e.g. `ar` or `fr-ca`
-
                     localizable_relative_path = localizable_abs_path.relative_to(module_path / module_name)
+                    language, _rest = str(localizable_relative_path).split('.lproj')  # e.g. `ar` or `fr-ca`
                     print('  - Adding', localizable_relative_path, 'with name', language)
-                    xcode_project.add_file(localizable_relative_path, name=language, tree=LOCALIZABLE_FILES_TREE)
+                    localizable_groups = xcode_project.get_groups_by_name(name='Localizable.strings',
+                                                                          section='PBXVariantGroup')
+                    if len(localizable_groups) != 1:
+                        # We need a single group. If many are found then, it's a problem.
+                        raise Exception(f'Error: Cannot find the Localizable.strings group, please add the English '
+                                        f'source translation strings with the name Localizable.strings. '
+                                        f'Results: "{localizable_groups}"')
+                    localizable_group = localizable_groups[0]
+
+                    xcode_project.add_file(
+                        str(localizable_relative_path),
+                        name=language,
+                        parent=localizable_group,
+                        force=True,
+                        tree=LOCALIZABLE_FILES_TREE,
+                        file_options=FileOptions(
+                            create_build_files=False,
+                        ),
+                    )
             xcode_project.save()
 
     except Exception as e:
